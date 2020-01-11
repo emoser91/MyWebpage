@@ -9,17 +9,22 @@ header{
     background:black;
     padding:20px;
 } 
-section{
+section.feature-box{
     background:white;
     color:gray;
     padding: 20px;
     display:flex;
     flex-direction: row;
 }
-div{
-    background:blue;
+.feature-box div{
     width: 100px;
     margin:auto;
+}
+section.feature-box.sales div{
+    background:blue;
+}
+section.feature-box.closeouts div{
+    background:red;
 }
 ul{
     margin: 0;
