@@ -26,6 +26,17 @@ section.feature-box.sales div{
 section.feature-box.closeouts div{
     background:red;
 }
+li:first-child{
+    background: red;
+    margin-left: 0px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    background-color: green;
+}
 ul{
     margin: 0;
     padding: 0;
@@ -34,6 +45,10 @@ ul{
 li{
     display:inline-block;
     margin-right: 20px;
+    background-color:gray;
+    border-radius: 3px;
+    padding: 2px;
+
 }
 footer{
     background: black;                
