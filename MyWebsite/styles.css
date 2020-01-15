@@ -24,6 +24,10 @@ header a{
     margin-top: 40px;
 }
 
+header .mobile{
+    display:none;
+}
+
 header .logo a{
     background-image:url("images/Newartisanweblogo.png");
     background-size: 200px;
@@ -49,6 +53,31 @@ nav li{
     padding: 2px;
 }
 
+/* RESPONSIVE RULES */
+@media screen and (max-width:650px){
+    header{
+        height:250px;
+        background-position: 0 -40px;
+    }
+    header .mobile{
+        display: inline-block;
+    }
+
+    header .desktop{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px){
+    header{
+        height:200px;
+        background-position: 0 0px;
+    }
+    nav li{
+        margin-right: 0px;
+    }
+}
+
 /* FEATURES */
 .features{
     background:white;
@@ -56,6 +85,7 @@ nav li{
     padding: 20px;
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .features figure{
