@@ -1,61 +1,29 @@
-//Simple Example of functions and variables in JS
+//JAVASCRIPT EVENTS
 
-function add (first,second)
+var numOne = document.getElementById("num-one");
+var numTwo = document.getElementById("num-two");
+var addSum = document.getElementById("add-sum");
+
+//Events
+numOne.addEventListener("input", add);
+numTwo.addEventListener("input", add);
+
+function add()
 {
-    return first + second;
+    var one = parseFloat(numOne.value) || 0;
+    var two = parseFloat(numTwo.value) || 0;
+    var sum = one + two;
+    //console.log(one,two);
+    addSum.innerHTML = "Your Sum is: " +sum;
 }
 
-var sum = add(1,2);
-alert(sum);
-//can also call alert( add(1,2) );
+//List of Events
+// Click, mouseenter, mouseleave, mousedown, mouseup, mousemove, keydown, keyup, blur, focus
+// There are tons just like in c#/.net things
 
-function go(name,age)
+/*
+numOne.addEventListener("click", function()
 {
-    if (age > 20)
-    {
-        return name+'!';
-    }
-    else
-    {
-        return name;
-    }
-}
-alert(go("Eric",28));
- 
-//Note that function will report undefined if there is no return
-
-//Arrays
-var myList = ['apples', 'oranges', go("eric",28)]
-myList[4] = 10;
-
-//In the developer console, you can look at this with myList
-//You can also use myList.pop() to get the last item
-
-//How to do a advanced loop. Note that this is a newer browser thing
-var myListb = ['apples', 'oranges','bananas'];
-myListb.forEach(function(value,index)
-{
-    console.log(value,index);
+    console.log("HI");
 });
-
-//While Loop
-var times = 0;
-while (times < 10)
-{
-    console.log('tired it', times);
-    times++;
-}
-
-//Do While Loop
-var timesb = 0;
-do
-{
-    console.log('tired it b', timesb);
-    timesb++;
-}while(timesb < 10)
-
-//For Loop
-for (var i = 0; i < 10; i++)
-{
-    console.log('I is', i);
-}
+*/
