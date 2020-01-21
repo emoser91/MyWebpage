@@ -26,23 +26,43 @@
         </header>
        <section class="features">
            <figure>
-                <img src="images/breads2.jpg" alt="Fresh Backed Bread">
+                <img src="images/breads2.jpg" alt="Fresh Baked Bread" id="Bread">
                 <figcaption>Fresh Baked Bread</figcaption>
            </figure>
            <figure>
-                <img src="images/coffee.jpg" alt="Fresh Coffee">
+                <img src="images/coffee.jpg" alt="Fresh Coffee" id="Coffee">
                 <figcaption>Fresh Coffee</figcaption>
             </figure>
             <figure>
-                <img src="images/goods.jpg" alt="Goods and Supplies">
+                <img src="images/goods.jpg" alt="Goods and Supplies" id="Goods">
                 <figcaption>Goods and Supplies</figcaption>
             </figure>
         </section>
-       <footer>
+       <footer id="Footer">
            123 Main Street Germantown, WI • 555-555-5555 us@me.com
        </footer>
 
        <!-- This is how to add Javascript, It is added here always -->
        <script src="scripts/main.js"></script>
+
+       <!-- This is how to add JQuery -->
+       <script src="scripts/jQuery.js"></script>
+
+       <script>
+        // This is JQuery
+        // you can also just use $(function){ }); instead
+        $(document).ready(function(){
+        
+            $("#Bread").hide(1000).show(1000); //hides the first panel then shows it again
+            $("#Coffee").slideUp(1000).delay(1000).slideDown(1000);
+            //$('#Goods').fadeOut(1000).fadeIn(1000);
+            $('#Goods').fadeToggle(1000).fadeToggle(1000); //you can use toggle for most things
+
+            $("#Footer").css({
+                color:'red',
+                fontWeight:'bold'});
+        });
+    </script>
+
     </body>
 </html>
